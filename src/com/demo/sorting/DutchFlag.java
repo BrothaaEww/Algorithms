@@ -16,15 +16,19 @@ public class DutchFlag {
 		int high = arr.length - 1;
 
 		while (mid <= high) {
-			if (arr[mid] == 0) {
+			switch (arr[mid]) {
+			case 0 -> {
 				swap(arr, low, mid);
 				low++;
 				mid++;
-			} else if (arr[mid] == 1) {
+			}
+			case 1 -> {
 				mid++;
-			} else {
+			}
+			case 2 -> {
 				swap(arr, mid, high);
 				high--;
+			}
 			}
 		}
 	}
